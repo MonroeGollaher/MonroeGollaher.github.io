@@ -1,19 +1,28 @@
 import React from "react";
-import { HeaderWrapper } from "./styles";
+import {
+  HeaderWrapper,
+  Blurb,
+  Name,
+  Bio,
+  Languages,
+  PortfolioPicture,
+} from "./styles";
+import Picture from "./assets/monroePortfolio.jpg";
 
 const Header = () => {
   return (
     <HeaderWrapper>
-      <h3>Monroe Gollaher</h3>
-      <h5>Software Developer // Photographer</h5>
-      <p>
+      <PortfolioPicture src={Picture} />
+      <Name>Monroe Gollaher.</Name>
+      <Bio>Software Developer // Photographer</Bio>
+      <Blurb>
         Full-stack software developer with a passion for creativity and problem
         solving.
-      </p>
-      <p>
+      </Blurb>
+      <Languages>
         Javascript, C#, Dotnet Core, SQL, React, Vue.js, Node.js, MongoDB, Web
         API's, CSS/Bootstrap, HTML5 & more.
-      </p>
+      </Languages>
     </HeaderWrapper>
   );
 };
