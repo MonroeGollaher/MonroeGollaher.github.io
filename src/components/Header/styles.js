@@ -25,6 +25,10 @@ export const PortfolioPicture = styled.img`
   }
 `;
 
+export const TopArea = styled.div`
+  margin-bottom: 0;
+`;
+
 export const Name = styled.h2`
   font-size: 28px;
 `;
@@ -40,4 +44,23 @@ export const Blurb = styled.p`
 
 export const Languages = styled.p`
   font-size: 20px;
+`;
+
+export const SocialButtons = styled.div`
+  width: 300px;
+  font-size: 30px;
+`;
+
+export const ListWrapper = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0;
+`;
+
+export const ListItem = styled.li``;
+
+export const Link = styled.a`
+  color: black;
 `;
