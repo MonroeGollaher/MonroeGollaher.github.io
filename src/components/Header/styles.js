@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   margin: 0 auto;
-  text-align: center;
   max-width: 900px;
+  text-align: center;
 
   @media (max-width: 576px) {
     padding: 0 15px;
@@ -14,14 +14,14 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const PortfolioPicture = styled.img`
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
+  height: 200px;
   object-fit: cover;
+  width: 200px;
 
   @media (max-width: 576px) {
-    width: 150px;
     height: 150px;
+    width: 150px;
   }
 `;
 
@@ -38,8 +38,8 @@ export const Bio = styled.h2`
 `;
 
 export const Blurb = styled.p`
-  font-style: italic;
   font-size: 20px;
+  font-style: italic;
 `;
 
 export const Languages = styled.p`
@@ -52,11 +52,11 @@ export const SocialButtons = styled.div`
 `;
 
 export const ListWrapper = styled.ul`
-  list-style: none;
   display: flex;
   justify-content: space-around;
-  text-align: center;
+  list-style: none;
   padding: 0;
+  text-align: center;
 `;
 
 export const ListItem = styled.li``;
