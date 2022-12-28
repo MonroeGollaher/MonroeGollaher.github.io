@@ -29,10 +29,10 @@ const Header = () => (
       <Bio>Software Developer // Photographer</Bio>
       <Blurb>
         Full-stack software developer with a passion for creativity and problem
-        solving.
+        solving. 2 years experience working in the health & financial tech space.
       </Blurb>
       <Languages>
-        Javascript, C#, Dotnet Core, SQL, React, Vue.js, Node.js, MongoDB, Web
+        Javascript (React, Typescript), C#, Dotnet Core, SQL, React, Vue.js, Node.js, MongoDB, Web
         APIs, CSS/Bootstrap, HTML5 & more.
       </Languages>
     </TopArea>
