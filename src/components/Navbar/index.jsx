@@ -1,14 +1,14 @@
 import { string } from "prop-types";
 import React from "react";
-import { NavLink, NavTitle, NavWrapper } from "./styles";
+import styles from "./index.module.css";
 
 const Navbar = ({ title, links }) => (
-  <NavWrapper>
-    <NavTitle>{title}</NavTitle>
+  <div className={styles.component}>
+    <h1>{title}</h1>
     {links.map(({ text, href }) => (
-      <NavLink href={href}>{text}</NavLink>
+      <a href={href}>{text}</a>
     ))}
-  </NavWrapper>
+  </div>
 );
 
 Navbar.propTypes = {
