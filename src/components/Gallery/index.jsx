@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./index.module.css";
 
 const Gallery = () => (
-  <div>
+  <div className={styles.wrapper}>
     <h1>Gallery</h1>
   </div>
 );
