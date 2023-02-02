@@ -1,0 +1,55 @@
+.component {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+
+  @media (max-width: 576px) {
+    padding: 0 15px;
+  }
+}
+
+img {
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+
+  @media (max-width: 576px) {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.name {
+  font-size: 1.75rem;
+}
+
+.blurb {
+  font-style: italic;
+}
+
+.languages,
+.bio,
+.blurb {
+  font-size: 1.25rem;
+}
+
+.socialButtons {
+  width: 18.75rem;
+  font-size: 1.875rem;
+}
+
+.socialButtons a {
+  color: black;
+}
+
+.listWrapper {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}

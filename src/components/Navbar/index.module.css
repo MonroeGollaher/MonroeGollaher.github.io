@@ -1,0 +1,20 @@
+.component {
+  align-items: center;
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+
+.component h1 {
+  font-size: 1.25rem;
+  margin-inline-end: 1rem;
+}
+
+.component a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  margin-inline-end: 1rem;
+}
+
+.component a:hover {
+  text-decoration: underline;
+}
