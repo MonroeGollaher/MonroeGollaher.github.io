@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Gallery from "./components/Gallery";
+import Projects from "./components/Projects";
 
 function App() {
   const navLinks = [
@@ -21,6 +22,7 @@ function App() {
       <Navbar title="Monroe Gollaher" links={navLinks} />
       <Header />
       <Gallery />
+      <Projects />
     </div>
   );
 }
