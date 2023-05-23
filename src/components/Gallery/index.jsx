@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.css";
 
 const Gallery = ({ images }) => {
-  console.log("Image testing: ", images);
+  console.log("Image testing 2: ", images);
 
   return (
     <div className={styles.wrapper}>
