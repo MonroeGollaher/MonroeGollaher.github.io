@@ -3,8 +3,8 @@ import React from "react";
 import styles from "./index.module.css";
 
 const Image = ({ src, alt }) => {
-  console.log("Hello from Image Src: ", src);
-  console.log("Hello from Image Alt: ", alt);
+  console.log("Image Src: ", src);
+  console.log("Image Alt: ", alt);
 
   return (
     <div className={styles.component}>
