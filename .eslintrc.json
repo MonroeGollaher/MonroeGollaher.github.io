@@ -12,5 +12,5 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": { "quotes": "off" }
+  "rules": { "quotes": "off", "object-curly-newline": "off" }
 }

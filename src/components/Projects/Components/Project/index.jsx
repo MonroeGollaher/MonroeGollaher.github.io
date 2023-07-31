@@ -1,12 +1,42 @@
-import { string } from "prop-types";
+import { string, Object } from "prop-types";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import styles from "./index.module.css";
 
-const Project = ({ title, blurb }) => {
-  console.log("hello from projects");
+const Project = ({ title, blurb, image, githubLink }) => {
+  const { src, flipped } = image;
   return (
-    <div>
-      <h2>{title}</h2>
-      <p>{blurb}</p>
+    <div className={styles.component}>
+      {flipped ? (
+        <>
+          <img src={src} alt="" className={styles.img} />
+          <div className={styles.info}>
+            <h2>{title}</h2>
+            <p>{blurb}</p>
+            {githubLink && (
+              <>
+                <FontAwesomeIcon icon={faGithub} />
+                <a href={githubLink}>View on Github</a>
+              </>
+            )}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={styles.info}>
+            <h2>{title}</h2>
+            <p>{blurb}</p>
+            {githubLink && (
+              <>
+                <FontAwesomeIcon icon={faGithub} />
+                <a href={githubLink}>View on Github</a>
+              </>
+            )}
+          </div>
+          <img src={src} alt="" className={styles.img} />
+        </>
+      )}
     </div>
   );
 };
@@ -14,11 +44,18 @@ const Project = ({ title, blurb }) => {
 Project.propTypes = {
   title: string,
   blurb: string,
+  image: Object,
+  githubLink: string,
 };
 
 Project.defaultProps = {
   title: "",
   blurb: "",
+  image: {
+    src: "",
+    flipped: false,
+  },
+  githubLink: "",
 };
 
 export default Project;

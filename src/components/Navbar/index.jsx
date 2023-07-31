@@ -1,8 +1,9 @@
 import { string } from "prop-types";
 import React from "react";
 import styles from "./index.module.css";
+import navLinks from "./index.data";
 
-const Navbar = ({ title, links }) => (
+const Navbar = ({ title = "Monroe Gollaher", links = navLinks }) => (
   <div className={styles.component}>
     <h1>{title}</h1>
     {links.map(({ text, href }) => (
