@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
-import Project from "./Project";
-import projects from "./Project/ProjectData";
+import Project from "./Components/Project";
+import projects from "./Components/Project/ProjectData";
 
 const Projects = () => (
   <div className={styles.wrapper}>
