@@ -6,7 +6,7 @@ const projects = [
     githubLink: "https://github.com/MonroeGollaher/CSharpPintrestClone",
   },
   {
-    title: "Bar Trivia",
+    title: "Trivia",
     blurb:
       "This project was built with other developers. We utilized a lot of team problem solving skills to develop a full stack application aimed at bar-trivia hosts. Hosts can create a game, and invite end users to play via a room code. With the integration of sockets, players and hosts can play in real time. Scores and team ranking are calculated in real time as well.",
     githubLink: "https://github.com/MonroeGollaher/TriviaGame",
