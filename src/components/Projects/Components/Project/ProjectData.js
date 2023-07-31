@@ -13,7 +13,7 @@ const projects = [
     deployedLink: "https://triviamanagement.herokuapp.com/#/",
   },
   {
-    title: " Logger",
+    title: "Bug Logger",
     blurb:
       "This project was a solo build of a full stack application designed for users in a company to log bugs with software. Users can see bugs posted by other users and leave notes/comments. Bugs can also be closed which make them un-editable, but are not deleted from the database. Bugs can also be sorted by their active status. Made using Vue.js/Javascript with a Node.js & Mongo.Db back-end",
     githubLink: "https://github.com/MonroeGollaher/VueBugLogger",
