@@ -6,20 +6,9 @@ import Gallery from "./components/Gallery";
 import Projects from "./components/Projects";
 
 function App() {
-  const navLinks = [
-    {
-      text: "Contact",
-      href: "/contact",
-    },
-    {
-      text: "Gallery",
-      href: "/gallery",
-    },
-  ];
-
   return (
     <div>
-      <Navbar title="Monroe Gollaher" links={navLinks} />
+      <Navbar />
       <Header />
       <Gallery />
       <Projects />
