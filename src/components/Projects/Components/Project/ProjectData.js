@@ -6,14 +6,14 @@ const projects = [
     githubLink: "https://github.com/MonroeGollaher/CSharpPintrestClone",
   },
   {
-    title: "Trivia",
+    title: "Bar Trivia",
     blurb:
       "This project was built with other developers. We utilized a lot of team problem solving skills to develop a full stack application aimed at bar-trivia hosts. Hosts can create a game, and invite end users to play via a room code. With the integration of sockets, players and hosts can play in real time. Scores and team ranking are calculated in real time as well.",
     githubLink: "https://github.com/MonroeGollaher/TriviaGame",
     deployedLink: "https://triviamanagement.herokuapp.com/#/",
   },
   {
-    title: "Bug Logger",
+    title: " Logger",
     blurb:
       "This project was a solo build of a full stack application designed for users in a company to log bugs with software. Users can see bugs posted by other users and leave notes/comments. Bugs can also be closed which make them un-editable, but are not deleted from the database. Bugs can also be sorted by their active status. Made using Vue.js/Javascript with a Node.js & Mongo.Db back-end",
     githubLink: "https://github.com/MonroeGollaher/VueBugLogger",
