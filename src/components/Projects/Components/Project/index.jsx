@@ -1,54 +1,40 @@
-import { string, Object } from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styles from "./index.module.css";
+import DesktopProject from "./DesktopProject";
+import MobileProject from "./MobileProject";
 
 const Project = ({ title, blurb, image, githubLink }) => {
-  const { src, flipped } = image;
   return (
-    <div className={styles.component}>
-      {flipped ? (
-        <>
-          <img src={src} alt="" className={styles.img} />
-          <div className={styles.info}>
-            <h2>{title}</h2>
-            <p>{blurb}</p>
-            {githubLink && (
-              <>
-                <FontAwesomeIcon icon={faGithub} />
-                <a href={githubLink}>View on Github</a>
-              </>
-            )}
-          </div>
-        </>
-      ) : (
-        <>
-          <div className={styles.info}>
-            <h2>{title}</h2>
-            <p>{blurb}</p>
-            {githubLink && (
-              <>
-                <FontAwesomeIcon icon={faGithub} />
-                <a href={githubLink}>View on Github</a>
-              </>
-            )}
-          </div>
-          <img src={src} alt="" className={styles.img} />
-        </>
-      )}
-    </div>
+    <>
+      <DesktopProject
+        className={styles.desktopWrapper}
+        title={title}
+        blurb={blurb}
+        githubLink={githubLink}
+        image={image}
+      />
+      <MobileProject
+        className={styles.mobileWrapper}
+        title={title}
+        blurb={blurb}
+        githubLink={githubLink}
+        image={image}
+      />
+    </>
   );
 };
 
 Project.propTypes = {
-  title: string,
-  blurb: string,
-  image: Object,
-  githubLink: string,
+  className: PropTypes.string,
+  title: PropTypes.string,
+  blurb: PropTypes.string,
+  image: PropTypes.object,
+  githubLink: PropTypes.string,
 };
 
 Project.defaultProps = {
+  className: "",
   title: "",
   blurb: "",
   image: {

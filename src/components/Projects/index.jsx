@@ -8,6 +8,7 @@ const Projects = () => (
     <h1>Projects</h1>
     {projects.map(({ title, blurb, image, githubLink }) => (
       <Project
+        key={title}
         title={title}
         blurb={blurb}
         image={image}
