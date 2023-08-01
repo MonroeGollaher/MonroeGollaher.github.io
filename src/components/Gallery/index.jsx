@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./index.module.css";
+import PropTypes from "prop-types";
 
 const Gallery = ({ images }) => {
   console.log("Image testing 2: ", images);
@@ -12,7 +13,7 @@ const Gallery = ({ images }) => {
 };
 
 Gallery.propTypes = {
-  images: Array,
+  images: PropTypes.array,
 };
 
 Gallery.defaultProps = {
