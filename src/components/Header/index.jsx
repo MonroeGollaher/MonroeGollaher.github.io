@@ -6,7 +6,7 @@ import {
   faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import Picture from "./assets/monroePortfolio.jpg";
+import Picture from "./assets/monroe-iceland.jpg";
 
 import styles from "./index.module.css";
 
