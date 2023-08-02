@@ -14,7 +14,7 @@ const DesktopProject = ({ className, title, blurb, image, githubLink }) => {
         <>
           <img src={src} alt="" className={styles.img} />
           <div className={styles.info}>
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <p>{blurb}</p>
             {githubLink && (
               <>

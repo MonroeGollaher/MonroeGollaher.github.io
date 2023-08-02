@@ -1,5 +1,43 @@
 .component {
+  padding: 0.5rem;
   text-align: center;
+
+  & h3 {
+    font-size: 1.25rem;
+    margin-block: 1rem;
+  }
+
+  & p {
+    font-size: 0.875rem;
+  }
+
+  & a {
+    margin-block-end: 1rem;
+  }
+
+  & .info {
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 10px 10px 24px -12px rgba(0, 0, 0, 0.75);
+    padding: 0.75rem;
+  }
+
+  & .img {
+    border-radius: 0.5rem;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      max-width: 50%;
+    }
+  }
+
+  & .githubLink {
+    margin-block-end: 1rem;
+
+    & a {
+      margin-inline-start: 0.25rem;
+    }
+  }
 
   @media (min-width: 768px) {
     display: flex;
@@ -16,17 +54,4 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
-}
-
-.img {
-  width: 100%;
-  @media (min-width: 768px) {
-    max-width: 50%;
-  }
-}
-
-.info {
-  border-radius: 15px;
-  box-shadow: 10px 10px 24px -12px rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(0, 0, 0, 0.125);
 }

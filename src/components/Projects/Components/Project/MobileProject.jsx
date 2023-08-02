@@ -9,18 +9,18 @@ const MobileProject = ({ className, title, blurb, image, githubLink }) => {
   const { src } = image;
 
   return (
-    <div className={classNames(className)}>
+    <div className={classNames(styles.component, className)}>
       <div className={styles.info}>
-        <h2>{title}</h2>
+        <img src={src} alt="" className={styles.img} />
+        <h3>{title}</h3>
         <p>{blurb}</p>
         {githubLink && (
-          <>
+          <div className={styles.githubLink}>
             <FontAwesomeIcon icon={faGithub} />
             <a href={githubLink}>View on Github</a>
-          </>
+          </div>
         )}
       </div>
-      <img src={src} alt="" className={styles.img} />
     </div>
   );
 };
