@@ -24,7 +24,7 @@
 }
 
 .name {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .blurb {
@@ -32,8 +32,11 @@
 }
 
 .languages,
-.bio,
 .blurb {
+  font-size: 0.875rem;
+}
+
+.bio {
   font-size: 1.25rem;
 }
 
@@ -50,6 +53,7 @@
   display: flex;
   justify-content: space-around;
   list-style: none;
+  margin-block: 1rem;
   padding: 0;
   text-align: center;
 }

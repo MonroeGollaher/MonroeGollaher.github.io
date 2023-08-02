@@ -11,8 +11,8 @@
 
 .component a {
   color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
   margin-inline-end: 1rem;
+  text-decoration: none;
 }
 
 .component a:hover {

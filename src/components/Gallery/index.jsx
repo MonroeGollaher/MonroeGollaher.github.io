@@ -7,7 +7,7 @@ const Gallery = ({ images }) => {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Photo Gallery</h1>
+      <h2>Photo Gallery</h2>
     </div>
   );
 };

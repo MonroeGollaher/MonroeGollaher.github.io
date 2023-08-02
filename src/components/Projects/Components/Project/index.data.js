@@ -27,6 +27,16 @@ const projects = [
     },
   },
   {
+    title: "Pokemon",
+    blurb:
+      "This project was a full stack solo build. Pokemon cards are rendered to the screen with data coming in from an API. When users find a Pokemon they like, they can add them to their personal collection. Pokemon can also be removed from a users collection. When a Pokemon from the API is saved to the collection, it is transffered to a custom API. Made using Vue.js/Javascript, MongoDB, Node.js / Express.",
+    githubLink: "https://github.com/MonroeGollaher/FullstackPokemon",
+    image: {
+      src: pokemonImg,
+      flipped: true,
+    },
+  },
+  {
     title: "Bug Logger",
     blurb:
       "This project was a solo build of a full stack application designed for users in a company to log bugs with software. Users can see bugs posted by other users and leave notes/comments. Bugs can also be closed which make them un-editable, but are not deleted from the database. Bugs can also be sorted by their active status. Made using Vue.js/Javascript with a Node.js & Mongo.Db back-end",
@@ -53,16 +63,6 @@ const projects = [
     deployedLink: "https://kanbantooelectricboogaloo.herokuapp.com/",
     image: {
       src: kanbanImg,
-    },
-  },
-  {
-    title: "Pokemon",
-    blurb:
-      "This project was a full stack solo build. Pokemon cards are rendered to the screen with data coming in from an API. When users find a Pokemon they like, they can add them to their personal collection. Pokemon can also be removed from a users collection. When a Pokemon from the API is saved to the collection, it is transffered to a custom API. Made using Vue.js/Javascript, MongoDB, Node.js / Express.",
-    githubLink: "https://github.com/MonroeGollaher/FullstackPokemon",
-    image: {
-      src: pokemonImg,
-      flipped: true,
     },
   },
 ];

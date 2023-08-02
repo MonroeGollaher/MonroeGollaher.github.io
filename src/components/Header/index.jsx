@@ -15,7 +15,7 @@ const Header = () => (
     <img src={Picture} alt="profile" />
     <div>
       <h2 className={styles.name}>Monroe Gollaher.</h2>
-      <h2 className={styles.Bio}>Software Developer // Photographer</h2>
+      <h2 className={styles.bio}>Software Developer // Photographer</h2>
       <p className={styles.blurb}>
         Full-stack software developer with a passion for creativity and problem
         solving. 2 years experience working in the health & financial tech

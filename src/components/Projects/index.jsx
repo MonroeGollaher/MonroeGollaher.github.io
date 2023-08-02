@@ -5,7 +5,7 @@ import projects from "./Components/Project/index.data";
 
 const Projects = () => (
   <div className={styles.wrapper}>
-    <h1>Projects</h1>
+    <h2>Projects</h2>
     {projects.map(({ title, blurb, image, githubLink }) => (
       <Project
         key={title}
