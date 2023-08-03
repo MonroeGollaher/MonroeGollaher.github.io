@@ -23,7 +23,6 @@ const projects = [
     deployedLink: "https://triviamanagement.herokuapp.com/#/",
     image: {
       src: triviaImg,
-      flipped: true,
     },
   },
   {
@@ -33,7 +32,16 @@ const projects = [
     githubLink: "https://github.com/MonroeGollaher/FullstackPokemon",
     image: {
       src: pokemonImg,
-      flipped: true,
+    },
+  },
+  {
+    title: "Kanban Board",
+    blurb:
+      "This full stack project was built with another developer in just a few days. We replicated a kanban board, where users can create multple to-do lists on one 'board'. Each user can have as many boards as they like, all with different lists and tasks associated to each. Because each board is intended to be shared with collegaues, each task on a to-do list can have comments as well. Made using Vue.js/Javascript, Mongo.db & Node.js with auth0 for authentication.",
+    githubLink: "https://github.com/MCharron93/Kanbantoo-Electric-Boogaloo",
+    deployedLink: "https://kanbantooelectricboogaloo.herokuapp.com/",
+    image: {
+      src: kanbanImg,
     },
   },
   {
@@ -52,17 +60,6 @@ const projects = [
     githubLink: "https://github.com/MonroeGollaher/VueBlogger",
     image: {
       src: blogzImg,
-      flipped: true,
-    },
-  },
-  {
-    title: "Kanban Board",
-    blurb:
-      "This full stack project was built with another developer in just a few days. We replicated a kanban board, where users can create multple to-do lists on one 'board'. Each user can have as many boards as they like, all with different lists and tasks associated to each. Because each board is intended to be shared with collegaues, each task on a to-do list can have comments as well. Made using Vue.js/Javascript, Mongo.db & Node.js with auth0 for authentication.",
-    githubLink: "https://github.com/MCharron93/Kanbantoo-Electric-Boogaloo",
-    deployedLink: "https://kanbantooelectricboogaloo.herokuapp.com/",
-    image: {
-      src: kanbanImg,
     },
   },
 ];
