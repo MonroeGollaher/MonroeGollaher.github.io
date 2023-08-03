@@ -5,4 +5,10 @@
   & h2 {
     text-align: center;
   }
+
+  @media screen and (min-width: 768px) {
+    margin-inline: auto;
+    max-width: 75vw;
+    padding-inline: 2rem;
+  }
 }
