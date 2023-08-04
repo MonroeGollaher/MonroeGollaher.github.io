@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Keepr",
     blurb:
-      "This project was a solo build of a full stack Pinterest clone. Users can create an account and view 'Keeps' that other users have posted. After finding a Keep that they like, users can add the Keep to a Vault. A Vault is a collection of different Keeps. Perhaps one for home-decor ideas, one for DIY tips, etc. Each Vault can be made public or private. Made using Vue.js / Javascript, C#/.Net & MySql.",
+      "This project was a solo build of a full stack Pinterest clone. Users can create an account and view 'Keeps' that other users have posted. After finding a Keep that they like, users can add the Keep to a Vault. A Vault is a collection of different Keeps. Each Vault can be made public or private. Made using Vue.js / Javascript, C#/.Net & MySql.",
     githubLink: "https://github.com/MonroeGollaher/CSharpPintrestClone",
     image: {
       src: keeprImg,
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Bar Trivia",
     blurb:
-      "This project was built with other developers. We utilized a lot of team problem solving skills to develop a full stack application aimed at bar-trivia hosts. Hosts can create a game, and invite end users to play via a room code. With the integration of sockets, players and hosts can play in real time. Scores and team ranking are calculated in real time as well.",
+      "This project was built with other developers. We developed a full stack application aimed at bar-trivia hosts. Hosts can create a game, and invite end users to play via a room code. With the integration of sockets, players and hosts can play in real time. Scores and team ranking are calculated in real time as well.",
     githubLink: "https://github.com/MonroeGollaher/TriviaGame",
     deployedLink: "https://triviamanagement.herokuapp.com/#/",
     image: {
