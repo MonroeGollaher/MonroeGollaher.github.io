@@ -18,11 +18,10 @@ const Header = () => (
       <h2 className={styles.bio}>Software Developer // Photographer</h2>
       <p className={styles.blurb}>
         Full-stack software developer with a passion for creativity and problem
-        solving. 2 years experience working in the health & financial tech
-        space.
+        solving.
       </p>
       <p className={styles.languages}>
-        Javascript (React, Typescript), C#, Dotnet Core, SQL, React, Vue.js,
+        Javascript (React, Vue.js, Typescript, Angular), C#, .NET Core, SQL,
         Node.js, MongoDB, Web APIs, CSS/Bootstrap, HTML5 & more.
       </p>
     </div>

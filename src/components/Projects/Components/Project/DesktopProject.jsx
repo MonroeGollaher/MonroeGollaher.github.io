@@ -17,10 +17,10 @@ const DesktopProject = ({ className, title, blurb, image, githubLink }) => {
         <h2>{title}</h2>
         <p>{blurb}</p>
         {githubLink && (
-          <>
+          <div className={styles.githubLink}>
             <FontAwesomeIcon icon={faGithub} />
             <a href={githubLink}>View on Github</a>
-          </>
+          </div>
         )}
       </div>
     </div>
