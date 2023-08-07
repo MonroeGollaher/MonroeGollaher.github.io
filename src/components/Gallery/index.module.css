@@ -1,5 +1,10 @@
 .wrapper {
   text-align: center;
+
+  & h2 {
+    margin-block-end: 1.25rem;
+    margin-block-start: 0;
+  }
 }
 
 .gallery {
