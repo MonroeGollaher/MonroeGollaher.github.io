@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import classNames from "class-names";
 
 const Resume = ({ className }) => {
+  console.log(className);
   return (
     <div className={classNames(styles.wrapper, className)}>
       <h2>Experience</h2>
