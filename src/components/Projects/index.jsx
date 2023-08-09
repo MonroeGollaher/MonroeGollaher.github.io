@@ -11,6 +11,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Projects = ({ className }) => {
+  useEffect(() => {
+    const paginationBullets = document.querySelector(".swiper-pagination");
+    paginationBullets.classList.add(styles.pagination);
+  });
+
   return (
     <div className={classNames(styles.wrapper, className)}>
       <h2>Projects</h2>
