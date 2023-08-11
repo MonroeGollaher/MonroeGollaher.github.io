@@ -7,6 +7,10 @@ const navLinks = [
     text: "Gallery",
     href: "/gallery",
   },
+  {
+    text: "Projects",
+    href: "/projects",
+  },
 ];
 
 export default navLinks;

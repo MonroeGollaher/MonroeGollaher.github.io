@@ -5,11 +5,23 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import PropTypes from "prop-types";
 import classNames from "class-names";
 
-const DesktopProject = ({ className, title, blurb, image, githubLink }) => {
+const DesktopProject = ({
+  blurb,
+  className,
+  githubLink,
+  image,
+  theme,
+  title,
+}) => {
   const { src } = image;
+  const classList = classNames(
+    styles.component,
+    className,
+    theme === "dark" && styles.dark
+  );
 
   return (
-    <div className={classNames(styles.component, className)}>
+    <div className={classList}>
       <div className={styles.imgWrapperDesktop}>
         <img src={src} alt="" />
       </div>
@@ -28,22 +40,24 @@ const DesktopProject = ({ className, title, blurb, image, githubLink }) => {
 };
 
 DesktopProject.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string,
   blurb: PropTypes.string,
-  image: PropTypes.object,
+  className: PropTypes.string,
   githubLink: PropTypes.string,
+  image: PropTypes.object,
+  theme: PropTypes.string,
+  title: PropTypes.string,
 };
 
 DesktopProject.defaultProps = {
-  className: "",
-  title: "",
   blurb: "",
+  className: "",
+  githubLink: "",
   image: {
     src: "",
     flipped: false,
   },
-  githubLink: "",
+  theme: "",
+  title: "",
 };
 
 export default DesktopProject;

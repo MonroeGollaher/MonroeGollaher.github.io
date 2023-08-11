@@ -3,8 +3,9 @@ import React from "react";
 import styles from "./index.module.css";
 import DesktopProject from "./DesktopProject";
 import MobileProject from "./MobileProject";
+import classNames from "class-names";
 
-const Project = ({ title, blurb, image, githubLink }) => {
+const Project = ({ theme, title, blurb, image, githubLink }) => {
   return (
     <>
       <DesktopProject
@@ -13,6 +14,7 @@ const Project = ({ title, blurb, image, githubLink }) => {
         blurb={blurb}
         githubLink={githubLink}
         image={image}
+        theme={theme}
       />
       <MobileProject
         className={styles.mobileWrapper}
@@ -20,6 +22,7 @@ const Project = ({ title, blurb, image, githubLink }) => {
         blurb={blurb}
         githubLink={githubLink}
         image={image}
+        theme={theme}
       />
     </>
   );
@@ -27,6 +30,7 @@ const Project = ({ title, blurb, image, githubLink }) => {
 
 Project.propTypes = {
   className: PropTypes.string,
+  theme: PropTypes.string,
   title: PropTypes.string,
   blurb: PropTypes.string,
   image: PropTypes.object,
@@ -36,6 +40,7 @@ Project.propTypes = {
 Project.defaultProps = {
   className: "",
   title: "",
+  theme: "",
   blurb: "",
   image: {
     src: "",

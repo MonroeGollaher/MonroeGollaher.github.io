@@ -1,12 +1,9 @@
 .component {
-  align-items: center;
   display: flex;
-  padding: 0.5rem 1rem;
-}
+  align-items: center;
+  justify-content: space-between;
 
-.component h1 {
-  font-size: 1.25rem;
-  margin-inline-end: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .component a {
