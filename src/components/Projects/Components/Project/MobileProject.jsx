@@ -5,11 +5,22 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import PropTypes from "prop-types";
 import classNames from "class-names";
 
-const MobileProject = ({ className, title, blurb, image, githubLink }) => {
+const MobileProject = ({
+  blurb,
+  className,
+  githubLink,
+  image,
+  theme,
+  title,
+}) => {
   const { src } = image;
-
+  const classList = classNames(
+    styles.component,
+    className,
+    theme === "dark" && styles.dark
+  );
   return (
-    <div className={classNames(styles.component, className)}>
+    <div className={classList}>
       <div className={styles.info}>
         <img src={src} alt="" className={styles.img} />
         <h3>{title}</h3>
@@ -26,22 +37,24 @@ const MobileProject = ({ className, title, blurb, image, githubLink }) => {
 };
 
 MobileProject.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string,
   blurb: PropTypes.string,
+  className: PropTypes.string,
   image: PropTypes.object,
   githubLink: PropTypes.string,
+  theme: PropTypes.string,
+  title: PropTypes.string,
 };
 
 MobileProject.defaultProps = {
-  className: "",
-  title: "",
   blurb: "",
+  className: "",
+  githubLink: "",
   image: {
     src: "",
     flipped: false,
   },
-  githubLink: "",
+  theme: "",
+  title: "",
 };
 
 export default MobileProject;

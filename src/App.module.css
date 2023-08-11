@@ -3,3 +3,17 @@
     margin-block: 1rem;
   }
 }
+
+.light {
+  background-color: #ffffff;
+}
+
+.dark {
+  background-color: #1d2530;
+  color: #fffff2;
+
+  & svg,
+  & a {
+    color: #fffff2;
+  }
+}

@@ -9,15 +9,23 @@ import { Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { ThemeContext } from "../../App";
 
 const Projects = ({ className }) => {
+  const {
+    _currentValue: { theme },
+  } = ThemeContext;
+
   useEffect(() => {
     const paginationBullets = document.querySelector(".swiper-pagination");
     paginationBullets.classList.add(styles.pagination);
+    if (theme === "dark") paginationBullets.classList.add(styles.dark);
   });
 
+  const classList = classNames(styles.wrapper, className);
+
   return (
-    <div className={classNames(styles.wrapper, className)}>
+    <div className={classList}>
       <h2>Projects</h2>
       <Swiper
         spaceBetween={30}
@@ -35,6 +43,7 @@ const Projects = ({ className }) => {
               blurb={blurb}
               image={image}
               githubLink={githubLink}
+              theme={theme}
             />
           </SwiperSlide>
         ))}
