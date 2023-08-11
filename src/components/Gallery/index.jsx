@@ -25,12 +25,4 @@ const Gallery = () => {
   );
 };
 
-// Gallery.propTypes = {
-//   images: PropTypes.array,
-// };
-
-// Gallery.defaultProps = {
-//   images: [],
-// };
-
 export default Gallery;
