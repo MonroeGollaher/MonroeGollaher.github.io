@@ -19,8 +19,8 @@ const Projects = ({ className }) => {
   useEffect(() => {
     const paginationBullets = document.querySelector(".swiper-pagination");
     paginationBullets.classList.add(styles.pagination);
-    if (theme === "dark") paginationBullets.classList.add(styles.dark);
-  });
+    paginationBullets.classList.toggle(styles.dark, theme === "dark");
+  }, [theme]);
 
   const classList = classNames(styles.wrapper, className);
 
