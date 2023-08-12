@@ -36,14 +36,14 @@ const Projects = ({ className }) => {
         onSwiper={(swiper) => console.log("swiper", swiper)}
         modules={[Pagination, A11y]}
       >
-        {projects.map(({ title, blurb, image, githubLink }) => (
+        {projects.map(({ blurb, githubLink, image, theme, title }) => (
           <SwiperSlide key={title} className={styles.swiperWrapper}>
             <Project
-              title={title}
               blurb={blurb}
-              image={image}
               githubLink={githubLink}
+              image={image}
               theme={theme}
+              title={title}
             />
           </SwiperSlide>
         ))}
