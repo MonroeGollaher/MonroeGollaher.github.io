@@ -4,9 +4,15 @@ import styles from "./index.module.css";
 import classNames from "class-names";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { ThemeContext } from "../../../../App";
 
-const Project = ({ blurb, githubLink, image, theme, title }) => {
+const Project = ({ blurb, githubLink, image, title }) => {
   const { src } = image;
+
+  const {
+    _currentValue: { theme },
+  } = ThemeContext;
+
   const classList = classNames(
     styles.component,
     theme === "dark" && styles.dark
@@ -35,7 +41,6 @@ Project.propTypes = {
   blurb: PropTypes.string,
   githubLink: PropTypes.string,
   image: PropTypes.object,
-  theme: PropTypes.string,
   title: PropTypes.string,
 };
 
@@ -45,7 +50,6 @@ Project.defaultProps = {
   image: {
     src: "",
   },
-  theme: "",
   title: "",
 };
 
