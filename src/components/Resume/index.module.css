@@ -54,7 +54,7 @@
 
     & p {
       font-size: 0.875rem;
-      margin-block: 0.5rem;
+      margin-block: 0;
     }
   }
 }

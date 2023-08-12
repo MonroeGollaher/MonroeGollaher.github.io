@@ -30,17 +30,17 @@ const Header = () => {
       <div className={styles.socialButtons}>
         <ul className={styles.listWrapper}>
           <li>
-            <a href="https://rb.gy/kb8lcq">
+            <a href="https://www.instagram.com/thisismonroe/">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
           <li>
-            <a href="https://rb.gy/srpbts">
+            <a href="https://www.linkedin.com/in/monroe-gollaher/">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </li>
           <li>
-            <a href="https://rb.gy/hdiedb">
+            <a href="https://github.com/MonroeGollaher">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
