@@ -1,52 +1,52 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styles from "./index.module.css";
-import DesktopProject from "./DesktopProject";
-import MobileProject from "./MobileProject";
 import classNames from "class-names";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const Project = ({ theme, title, blurb, image, githubLink }) => {
+const Project = ({ blurb, githubLink, image, theme, title }) => {
+  const { src } = image;
+  const classList = classNames(
+    styles.component,
+    theme === "dark" && styles.dark
+  );
+
   return (
-    <>
-      <DesktopProject
-        className={styles.desktopWrapper}
-        title={title}
-        blurb={blurb}
-        githubLink={githubLink}
-        image={image}
-        theme={theme}
-      />
-      <MobileProject
-        className={styles.mobileWrapper}
-        title={title}
-        blurb={blurb}
-        githubLink={githubLink}
-        image={image}
-        theme={theme}
-      />
-    </>
+    <div className={classList}>
+      <div className={styles.imgWrapper}>
+        <img src={src} alt="" />
+      </div>
+      <div className={styles.info}>
+        <h3>{title}</h3>
+        <p>{blurb}</p>
+        {githubLink && (
+          <div className={styles.githubLink}>
+            <FontAwesomeIcon icon={faGithub} />
+            <a href={githubLink}>View on Github</a>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 
 Project.propTypes = {
-  className: PropTypes.string,
+  blurb: PropTypes.string,
+  githubLink: PropTypes.string,
+  image: PropTypes.object,
   theme: PropTypes.string,
   title: PropTypes.string,
-  blurb: PropTypes.string,
-  image: PropTypes.object,
-  githubLink: PropTypes.string,
 };
 
 Project.defaultProps = {
-  className: "",
-  title: "",
-  theme: "",
   blurb: "",
+  githubLink: "",
   image: {
     src: "",
-    flipped: false,
   },
-  githubLink: "",
+  theme: "",
+  title: "",
 };
 
 export default Project;
