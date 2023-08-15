@@ -4,14 +4,50 @@
   justify-content: space-between;
 
   padding: 0.5rem 1rem;
+
+  & .button {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  & .navOpen {
+    background-color: #ffffff;
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      /* bottom: auto;
+      height: auto; */
+    }
+  }
+
+  & a {
+    color: #2f2f2f;
+    margin-inline-end: 1rem;
+    text-decoration: none;
+  }
 }
 
-.component a {
-  color: rgba(0, 0, 0, 0.5);
-  margin-inline-end: 1rem;
-  text-decoration: none;
+.nav {
+  display: none;
+
+  & ul {
+    list-style-type: none;
+    padding-inline: 0;
+  }
+
+  & ul > li {
+    font-size: 1.25rem;
+    margin-block: 1rem;
+  }
 }
 
-.component a:hover {
-  text-decoration: underline;
+.darkNav {
+  background-color: #1d2530 !important;
+
+  & a {
+    color: #fffff2 !important;
+  }
 }

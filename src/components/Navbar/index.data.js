@@ -1,5 +1,9 @@
 const navLinks = [
   {
+    text: "Home",
+    href: "/",
+  },
+  {
     text: "Contact",
     href: "/contact",
   },
