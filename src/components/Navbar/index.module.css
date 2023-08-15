@@ -1,17 +1,11 @@
-.component {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0.5rem 1rem;
+.mobile {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
-.component a {
-  color: rgba(0, 0, 0, 0.5);
-  margin-inline-end: 1rem;
-  text-decoration: none;
-}
-
-.component a:hover {
-  text-decoration: underline;
+.desktop {
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
