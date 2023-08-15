@@ -1,0 +1,47 @@
+.mobileNav {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+
+  & .button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  & .navOpen {
+    background-color: #ffffff;
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  & a {
+    color: #2f2f2f;
+    margin-inline-end: 1rem;
+    text-decoration: none;
+  }
+}
+
+.nav {
+  display: none;
+
+  & ul {
+    list-style-type: none;
+    padding-inline: 0;
+  }
+
+  & ul > li {
+    font-size: 1.25rem;
+    margin-block: 1rem;
+  }
+}
+
+.darkNav {
+  background-color: #1d2530 !important;
+
+  & a {
+    color: #fffff2 !important;
+  }
+}
