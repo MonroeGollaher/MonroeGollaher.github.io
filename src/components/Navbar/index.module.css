@@ -1,11 +1,69 @@
-.mobile {
-  @media (min-width: 768px) {
+.component {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  & .nav {
     display: none;
+
+    & ul {
+      list-style-type: none;
+      padding-inline: 0;
+    }
+
+    & ul > li {
+      font-size: 1.25rem;
+      margin-block: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      display: block;
+
+      & ul {
+        display: flex;
+        margin-block: 0;
+      }
+
+      & ul > li {
+        margin-block: 0;
+      }
+
+      & ul > li > a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & .button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  & .navOpen {
+    background-color: #ffffff;
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  & a {
+    color: #2f2f2f;
+    margin-inline-end: 1rem;
+    text-decoration: none;
+  }
+
+  & .mobileOnly {
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }
 
-.desktop {
-  @media (max-width: 767px) {
-    display: none;
+.darkNav {
+  background-color: #1d2530 !important;
+
+  & a {
+    color: #fffff2 !important;
   }
 }
