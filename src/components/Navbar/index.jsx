@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import styles from "./index.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeToggle from "./components/ThemeToggle";
@@ -28,6 +28,23 @@ const Navbar = ({ className }) => {
   const {
     _currentValue: { theme },
   } = ThemeContext;
+
+  // Disable scrolling while mobileMenu is open
+  useLayoutEffect(() => {
+    const originalScrollY = window.scrollY;
+
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      window.scrollTo(0, originalScrollY);
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      window.scrollTo(0, originalScrollY);
+    };
+  }, [menuOpen]);
 
   return (
     <div className={classNames(styles.component, className)}>
