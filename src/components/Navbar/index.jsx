@@ -45,7 +45,7 @@ const Navbar = ({ className }) => {
   }, [menuOpen]);
 
   useEffect(() => {
-    const navbarHeight = document?.querySelector("#navbar")?.clientHeight;
+    const navbarHeight = document.querySelector("#navbar").clientHeight;
     document.querySelector("#nav-items").style.top = `${navbarHeight}px`;
   });
 
