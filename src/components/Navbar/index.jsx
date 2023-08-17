@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeToggle from "./components/ThemeToggle";
@@ -30,24 +30,27 @@ const Navbar = ({ className }) => {
   } = ThemeContext;
 
   // Disable scrolling while mobileMenu is open
-  useLayoutEffect(() => {
-    const originalScrollY = window.scrollY;
-
+  useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-      window.scrollTo(0, originalScrollY);
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    } else if (document.body.style.position === "fixed") {
+      const scrollY = parseInt(document.body.style.top || "0") * -1;
+      document.body.style.top = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
     }
-
-    return () => {
-      document.body.style.overflow = "";
-      window.scrollTo(0, originalScrollY);
-    };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const navbarHeight = document.querySelector("#navbar").clientHeight;
+    document.querySelector("#nav-items").style.top = `${navbarHeight}px`;
+  });
+
   return (
-    <div className={classNames(styles.component, className)}>
+    <div className={classNames(styles.component, className)} id="navbar">
       <div className={styles.menu}>
         {menuOpen ? (
           closeIcon()
@@ -65,6 +68,7 @@ const Navbar = ({ className }) => {
             menuOpen && styles.navOpen,
             theme === "dark" && styles.darkNav
           )}
+          id="nav-items"
         >
           <ul>
             {navLinks.map(({ text, href }) => (
