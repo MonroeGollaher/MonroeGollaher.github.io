@@ -25,7 +25,7 @@ const Resume = ({ className }) => {
               <header>Nov &apos;22 - Aug &apos;23</header>
             </div>
             <div className={styles.info}>
-              <h3>Software Enginner · MadeLabs</h3>
+              <h3>Software Engineer · MadeLabs</h3>
               <ul>
                 <li>
                   <p>
@@ -55,7 +55,7 @@ const Resume = ({ className }) => {
               <header>Apr &apos;21 - Oct &apos;22</header>
             </div>
             <div className={styles.info}>
-              <h3>Software Enginner · Foundry Interactive</h3>
+              <h3>Software Engineer · Foundry Interactive</h3>
               <ul>
                 <li>
                   <p>
