@@ -11,6 +11,7 @@
 .dark {
   background-color: #1d2530;
   color: #fffff2;
+  overflow: auto;
 
   & svg,
   & a {
