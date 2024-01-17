@@ -47,14 +47,25 @@
       margin-block-start: 0.25rem;
     }
 
+    & .company {
+      font-weight: 600;
+    }
+
     & ul {
       list-style-type: none;
+      margin-block-start: 1rem;
       padding-inline: 0;
     }
 
     & p {
       font-size: 0.875rem;
       margin-block: 0;
+    }
+
+    & .dates {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-decoration: underline;
     }
   }
 }

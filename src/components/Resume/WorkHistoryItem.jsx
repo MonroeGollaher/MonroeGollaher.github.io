@@ -12,13 +12,10 @@ const WorkHistoryListItem = ({
   return (
     <li className={className}>
       <div className={styles.experienceWrapper}>
-        <div className={styles.time}>
-          <header>{dates}</header>
-        </div>
         <div className={styles.info}>
-          <h3>
-            {jobTitle} · {company}
-          </h3>
+          <h3>{jobTitle}</h3>
+          <p className={styles.company}>{company}</p>
+          <p className={styles.dates}>{dates}</p>
           <ul>
             {lineItems.map((item, index) => (
               <li key={index}>

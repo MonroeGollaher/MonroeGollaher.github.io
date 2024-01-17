@@ -5,7 +5,7 @@ const navLinks = [
   },
   {
     text: "Contact",
-    href: "/contact",
+    href: "mailto:mgollaher92@gmail.com?subject=Let's%20get%20in%20touch",
   },
   {
     text: "Gallery",
