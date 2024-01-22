@@ -19,7 +19,7 @@ const WorkHistoryListItem = ({
           <ul>
             {lineItems.map((item, index) => (
               <li key={index}>
-                <p>- {item}</p>
+                <p>• {item}</p>
               </li>
             ))}
           </ul>
