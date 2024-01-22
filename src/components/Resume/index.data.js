@@ -27,7 +27,7 @@ const jobData = [
       "Software development using React, Typescript, Vite, Redux, Node.js, Express, Docker, Heroku, Postgress and more.",
       "Assisted a start-up in the medical / health & beauty space launch an e-commerce website from the ground up.",
       "Built React components / pages focused on scalability by utilizing a headless CMS.",
-      "Wrote unit and e2e tests using React Testing Library, Jest/Supertest as well as Playwright.",
+      "Wrote unit and e2e tests using React Testing Library, Jest/Supertest & Playwright.",
       "Used wire framing tools such as Figma to meet UX / UI schema acceptance criteria.",
       "Assisted in development of open-source software for a medical company.",
       "Took lead on migration to new Email Service Provider (ESP).",
