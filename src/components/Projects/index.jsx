@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./index.module.css";
 import Project from "./Components/Project";
 import projects from "./Components/Project/index.data";
@@ -10,8 +10,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ThemeContext } from "../../App";
+import { isInViewport } from "../../utils/isInViewport";
 
 const Projects = ({ className }) => {
+  const ref = useRef();
   const {
     _currentValue: { theme },
   } = ThemeContext;
@@ -20,12 +22,25 @@ const Projects = ({ className }) => {
     const paginationBullets = document.querySelector(".swiper-pagination");
     paginationBullets.classList.add(styles.pagination);
     paginationBullets.classList.toggle(styles.dark, theme === "dark");
-  }, [theme]);
+
+    const handleScroll = () => {
+      isInViewport(ref.current).then((isVisible) => {
+        if (isVisible) {
+          ref.current.classList.add("foo-bar");
+          // remove event listener after class gets added
+          window.removeEventListener("scroll", handleScroll);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+  }, [theme, ref]);
 
   const classList = classNames(styles.wrapper, className);
 
   return (
-    <div className={classList}>
+    <div className={classList} ref={ref}>
       <h2>Projects</h2>
       <Swiper
         spaceBetween={30}
