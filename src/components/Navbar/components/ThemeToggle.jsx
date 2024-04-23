@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { string } from "prop-types";
+import React from "react";
 import { ThemeContext } from "../../../App";
 
 const ThemeToggle = ({ className }) => {

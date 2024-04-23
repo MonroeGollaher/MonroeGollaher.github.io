@@ -1,15 +1,15 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
-  faLinkedinIn,
-  faInstagram,
   faGithub,
+  faInstagram,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import Picture from "./assets/monroe-iceland.jpg";
 
-import styles from "./index.module.css";
 import classNames from "class-names";
+import styles from "./index.module.css";
 
 const Header = () => {
   return (

@@ -1,16 +1,16 @@
-import React, { useEffect, useRef } from "react";
-import styles from "./index.module.css";
-import Project from "./Components/Project";
-import projects from "./Components/Project/index.data";
-import PropTypes from "prop-types";
 import classNames from "class-names";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, A11y } from "swiper/modules";
+import PropTypes from "prop-types";
+import React, { useEffect, useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { A11y, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { ThemeContext } from "../../App";
 import { isInViewport } from "../../utils/isInViewport";
+import Project from "./Components/Project";
+import projects from "./Components/Project/index.data";
+import styles from "./index.module.css";
 
 const Projects = ({ className }) => {
   const ref = useRef();

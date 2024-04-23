@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import React from "react";
 import styles from "./index.module.css";
-import PropTypes from "prop-types";
 
 const WorkHistoryListItem = ({
   className,
