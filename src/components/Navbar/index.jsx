@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import styles from "./index.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ThemeToggle from "./components/ThemeToggle";
-import { string } from "prop-types";
-import { ThemeContext } from "../../App";
-import classNames from "class-names";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classNames from "class-names";
+import { string } from "prop-types";
+import React, { useEffect, useState } from "react";
+import { ThemeContext } from "../../App";
+import ThemeToggle from "./components/ThemeToggle";
 import navLinks from "./index.data";
+import styles from "./index.module.css";
 
 const Navbar = ({ className }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,7 +66,7 @@ const Navbar = ({ className }) => {
           className={classNames(
             styles.nav,
             menuOpen && styles.navOpen,
-            theme === "dark" && styles.darkNav
+            theme === "dark" && styles.darkNav,
           )}
           id="nav-items"
         >

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 // import PropTypes from "prop-types";
-import photoData from "./index.data";
 import Image from "./components/Image";
+import photoData from "./index.data";
 
 const Gallery = () => {
   const [activeImage, setActiveImage] = useState(null);

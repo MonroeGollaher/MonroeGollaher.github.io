@@ -1,10 +1,10 @@
-import React from "react";
-import styles from "./index.module.css";
-import PropTypes from "prop-types";
 import classNames from "class-names";
+import PropTypes from "prop-types";
+import React from "react";
 import { ThemeContext } from "../../App";
 import WorkHistoryListItem from "./WorkHistoryItem";
 import jobData from "./index.data";
+import styles from "./index.module.css";
 
 const Resume = ({ className }) => {
   const {
@@ -14,7 +14,7 @@ const Resume = ({ className }) => {
   const classList = classNames(
     styles.wrapper,
     className,
-    theme === "dark" && styles.dark
+    theme === "dark" && styles.dark,
   );
 
   return (
