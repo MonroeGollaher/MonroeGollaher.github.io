@@ -1,20 +1,15 @@
 import classNames from "class-names";
 import PropTypes from "prop-types";
 import React from "react";
-import { ThemeContext } from "../../App";
 import WorkHistoryListItem from "./WorkHistoryItem";
 import jobData from "./index.data";
 import styles from "./index.module.css";
 
 const Resume = ({ className }) => {
-  const {
-    _currentValue: { theme },
-  } = ThemeContext;
-
   const classList = classNames(
     styles.wrapper,
-    className,
-    theme === "dark" && styles.dark,
+    className
+    // theme === "dark" && styles.dark
   );
 
   return (

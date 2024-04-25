@@ -3,19 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "class-names";
 import PropTypes from "prop-types";
 import React from "react";
-import { ThemeContext } from "../../../../App";
 import styles from "./index.module.css";
 
 const Project = ({ blurb, githubLink, image, title }) => {
   const { src } = image;
 
-  const {
-    _currentValue: { theme },
-  } = ThemeContext;
-
   const classList = classNames(
-    styles.component,
-    theme === "dark" && styles.dark,
+    styles.component
+    // theme === "dark" && styles.dark
   );
 
   return (
