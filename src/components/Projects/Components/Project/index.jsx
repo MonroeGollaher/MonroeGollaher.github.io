@@ -8,10 +8,7 @@ import styles from "./index.module.css";
 const Project = ({ blurb, githubLink, image, title }) => {
   const { src } = image;
 
-  const classList = classNames(
-    styles.component
-    // theme === "dark" && styles.dark
-  );
+  const classList = classNames(styles.component, "secondary");
 
   return (
     <div className={classList}>

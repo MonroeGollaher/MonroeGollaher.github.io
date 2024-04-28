@@ -1,3 +1,4 @@
+import classNames from "class-names";
 import PropTypes from "prop-types";
 import React from "react";
 import styles from "./index.module.css";
@@ -11,7 +12,7 @@ const WorkHistoryListItem = ({
 }) => {
   return (
     <li className={className}>
-      <div className={styles.experienceWrapper}>
+      <div className={classNames(styles.experienceWrapper, "secondary")}>
         <div className={styles.info}>
           <h3>{jobTitle}</h3>
           <p className={styles.company}>{company}</p>

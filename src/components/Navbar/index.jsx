@@ -45,7 +45,7 @@ const Navbar = ({ className }) => {
   });
 
   return (
-    <div className={classNames(styles.component, className)} id="navbar">
+    <div className={styles.component} id="navbar">
       <div className={styles.menu}>
         {menuOpen ? (
           closeIcon()
@@ -58,11 +58,7 @@ const Navbar = ({ className }) => {
           />
         )}
         <div
-          className={classNames(
-            styles.nav,
-            menuOpen && styles.navOpen
-            // theme === "dark" && styles.darkNav
-          )}
+          className={classNames(styles.nav, menuOpen && styles.navOpen)}
           id="nav-items"
         >
           <ul>

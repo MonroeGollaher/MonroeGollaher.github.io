@@ -17,11 +17,6 @@ const Projects = ({ className }) => {
   useEffect(() => {
     const paginationBullets = document.querySelector(".swiper-pagination");
     paginationBullets.classList.add(styles.pagination);
-    paginationBullets.classList.toggle(
-      styles.dark
-      // theme === "dark"
-    );
-
     const handleScroll = () => {
       isInViewport(ref.current).then((isVisible) => {
         if (isVisible) {
@@ -34,10 +29,7 @@ const Projects = ({ className }) => {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-  }, [
-    // theme,
-    ref,
-  ]);
+  }, [ref]);
 
   const classList = classNames(styles.wrapper, className);
 

@@ -6,11 +6,7 @@ import jobData from "./index.data";
 import styles from "./index.module.css";
 
 const Resume = ({ className }) => {
-  const classList = classNames(
-    styles.wrapper,
-    className
-    // theme === "dark" && styles.dark
-  );
+  const classList = classNames(styles.wrapper, className);
 
   return (
     <div className={classList}>

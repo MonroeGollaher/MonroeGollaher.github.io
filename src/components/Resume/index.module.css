@@ -73,9 +73,3 @@
     }
   }
 }
-
-.dark {
-  & .experienceWrapper {
-    background-color: #374151;
-  }
-}
