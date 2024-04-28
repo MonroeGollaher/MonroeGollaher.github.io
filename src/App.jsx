@@ -12,14 +12,14 @@ function App() {
     document.body.classList.toggle("dark-primary");
     const elements = document.getElementsByClassName("secondary");
     const paginationBullets = document.getElementsByClassName(
-      ".swiper-pagination-bullets"
+      "swiper-pagination-bullet"
     );
     for (let i = 0; i < elements.length; i++) {
       elements[i].classList.toggle("dark-secondary");
     }
 
     for (let i = 0; i < paginationBullets.length; i++) {
-      elements[i].classList.toggle("dark-text");
+      elements[i].classList.toggle("dark-mode-text");
     }
   }, [theme]);
 
