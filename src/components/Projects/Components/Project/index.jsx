@@ -19,7 +19,7 @@ const Project = ({ blurb, githubLink, image, title }) => {
         <h3>{title}</h3>
         <p>{blurb}</p>
         {githubLink && (
-          <div className={styles.githubLink}>
+          <div className={styles.githubLink} id="github-link">
             <FontAwesomeIcon icon={faGithub} />
             <a href={githubLink}>View on Github</a>
           </div>

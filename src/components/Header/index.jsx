@@ -28,7 +28,7 @@ const Header = () => {
         </p>
       </div>
       <div className={styles.socialButtons}>
-        <ul className={styles.listWrapper}>
+        <ul className={styles.listWrapper} id="social-links">
           <li>
             <a href="https://www.instagram.com/thisismonroe/">
               <FontAwesomeIcon icon={faInstagram} />

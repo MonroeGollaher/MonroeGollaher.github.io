@@ -15,8 +15,9 @@ function App() {
       .querySelector(".swiper-pagination")
       .querySelectorAll("span");
     const navLinks = document.getElementById("nav-items").querySelectorAll("a");
-
-    console.log(paginationBullets);
+    const socialLinks = document
+      .getElementById("social-links")
+      .querySelectorAll("a");
 
     for (let i = 0; i < elements.length; i++) {
       elements[i].classList.toggle("dark-secondary");
@@ -28,6 +29,10 @@ function App() {
 
     for (let i = 0; i < navLinks.length; i++) {
       navLinks[i].classList.toggle("dark-mode-text");
+    }
+
+    for (let i = 0; i < socialLinks.length; i++) {
+      socialLinks[i].classList.toggle("dark-mode-text");
     }
   }, [theme]);
 
