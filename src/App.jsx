@@ -11,15 +11,23 @@ function App() {
   useEffect(() => {
     document.body.classList.toggle("dark-primary");
     const elements = document.getElementsByClassName("secondary");
-    const paginationBullets = document.getElementsByClassName(
-      "swiper-pagination-bullet"
-    );
+    const paginationBullets = document
+      .querySelector(".swiper-pagination")
+      .querySelectorAll("span");
+    const navLinks = document.getElementById("nav-items").querySelectorAll("a");
+
+    console.log(paginationBullets);
+
     for (let i = 0; i < elements.length; i++) {
       elements[i].classList.toggle("dark-secondary");
     }
 
     for (let i = 0; i < paginationBullets.length; i++) {
-      elements[i].classList.toggle("dark-mode-text");
+      paginationBullets[i].classList.toggle("dark-mode-text");
+    }
+
+    for (let i = 0; i < navLinks.length; i++) {
+      navLinks[i].classList.toggle("dark-mode-text");
     }
   }, [theme]);
 

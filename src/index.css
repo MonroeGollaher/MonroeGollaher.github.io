@@ -23,5 +23,5 @@ code {
 }
 
 .dark-mode-text {
-  color: #fffff2;
+  color: #fffff2 !important;
 }
