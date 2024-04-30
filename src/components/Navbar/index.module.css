@@ -63,7 +63,8 @@
 .darkNav {
   background-color: #1d2530 !important;
 
-  & a {
+  & a,
+  svg {
     color: #fffff2 !important;
   }
 }

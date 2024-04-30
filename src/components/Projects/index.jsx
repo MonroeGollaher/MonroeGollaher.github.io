@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { A11y, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ThemeContext } from "../../App";
 import { isInViewport } from "../../utils/isInViewport";
 import Project from "./Components/Project";
 import projects from "./Components/Project/index.data";
@@ -14,15 +13,10 @@ import styles from "./index.module.css";
 
 const Projects = ({ className }) => {
   const ref = useRef();
-  const {
-    _currentValue: { theme },
-  } = ThemeContext;
 
   useEffect(() => {
     const paginationBullets = document.querySelector(".swiper-pagination");
     paginationBullets.classList.add(styles.pagination);
-    paginationBullets.classList.toggle(styles.dark, theme === "dark");
-
     const handleScroll = () => {
       isInViewport(ref.current).then((isVisible) => {
         if (isVisible) {
@@ -35,7 +29,7 @@ const Projects = ({ className }) => {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-  }, [theme, ref]);
+  }, [ref]);
 
   const classList = classNames(styles.wrapper, className);
 
@@ -51,13 +45,12 @@ const Projects = ({ className }) => {
         onSwiper={(swiper) => console.log("swiper", swiper)}
         modules={[Pagination, A11y]}
       >
-        {projects.map(({ blurb, githubLink, image, theme, title }) => (
+        {projects.map(({ blurb, githubLink, image, title }) => (
           <SwiperSlide key={title} className={styles.swiperWrapper}>
             <Project
               blurb={blurb}
               githubLink={githubLink}
               image={image}
-              theme={theme}
               title={title}
             />
           </SwiperSlide>

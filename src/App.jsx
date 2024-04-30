@@ -1,25 +1,48 @@
-import React, { createContext, useState } from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.module.css";
-import styles from "./App.module.css";
 import { HomePage } from "./Pages/Home";
 import Navbar from "./components/Navbar";
-export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const theme = useSelector((state) => state.theme.mode);
 
-  const className = theme === "light" ? styles.light : styles.dark;
+  useEffect(() => {
+    document.body.classList.toggle("dark-primary");
+    const elements = document.getElementsByClassName("secondary");
+    const paginationBullets = document
+      .querySelector(".swiper-pagination")
+      .querySelectorAll("span");
+    const navLinks = document.getElementById("nav-items").querySelectorAll("a");
+    const socialLinks = document
+      .getElementById("social-links")
+      .querySelectorAll("a");
+
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].classList.toggle("dark-secondary");
+    }
+
+    for (let i = 0; i < paginationBullets.length; i++) {
+      paginationBullets[i].classList.toggle("dark-mode-text");
+    }
+
+    for (let i = 0; i < navLinks.length; i++) {
+      navLinks[i].classList.toggle("dark-mode-text");
+    }
+
+    for (let i = 0; i < socialLinks.length; i++) {
+      socialLinks[i].classList.toggle("dark-mode-text");
+    }
+  }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <Router>
       <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </Router>
-    </ThemeContext.Provider>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -3,20 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "class-names";
 import PropTypes from "prop-types";
 import React from "react";
-import { ThemeContext } from "../../../../App";
 import styles from "./index.module.css";
 
 const Project = ({ blurb, githubLink, image, title }) => {
   const { src } = image;
 
-  const {
-    _currentValue: { theme },
-  } = ThemeContext;
-
-  const classList = classNames(
-    styles.component,
-    theme === "dark" && styles.dark,
-  );
+  const classList = classNames(styles.component, "secondary");
 
   return (
     <div className={classList}>
@@ -27,7 +19,7 @@ const Project = ({ blurb, githubLink, image, title }) => {
         <h3>{title}</h3>
         <p>{blurb}</p>
         {githubLink && (
-          <div className={styles.githubLink}>
+          <div className={styles.githubLink} id="github-link">
             <FontAwesomeIcon icon={faGithub} />
             <a href={githubLink}>View on Github</a>
           </div>

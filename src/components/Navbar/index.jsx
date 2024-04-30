@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "class-names";
 import { string } from "prop-types";
 import React, { useEffect, useState } from "react";
-import { ThemeContext } from "../../App";
 import ThemeToggle from "./components/ThemeToggle";
 import navLinks from "./index.data";
 import styles from "./index.module.css";
@@ -24,10 +23,6 @@ const Navbar = ({ className }) => {
       <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
     </svg>
   );
-
-  const {
-    _currentValue: { theme },
-  } = ThemeContext;
 
   // Disable scrolling while mobileMenu is open
   useEffect(() => {
@@ -50,7 +45,7 @@ const Navbar = ({ className }) => {
   });
 
   return (
-    <div className={classNames(styles.component, className)} id="navbar">
+    <div className={styles.component} id="navbar">
       <div className={styles.menu}>
         {menuOpen ? (
           closeIcon()
@@ -63,11 +58,7 @@ const Navbar = ({ className }) => {
           />
         )}
         <div
-          className={classNames(
-            styles.nav,
-            menuOpen && styles.navOpen,
-            theme === "dark" && styles.darkNav,
-          )}
+          className={classNames(styles.nav, menuOpen && styles.navOpen)}
           id="nav-items"
         >
           <ul>
