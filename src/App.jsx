@@ -10,7 +10,6 @@ function App() {
   const theme = useSelector((state) => state.theme.mode);
 
   useEffect(() => {
-    document.body.classList.toggle("dark-primary");
     const elements = document.getElementsByClassName("secondary");
     const paginationBullets = document
       ?.querySelector(".swiper-pagination")
@@ -22,21 +21,21 @@ function App() {
       ?.getElementById("social-links")
       ?.querySelectorAll("a");
 
-    for (let i = 0; i < elements?.length; i++) {
-      elements[i].classList.toggle("dark-secondary");
-    }
+    const toggleClass = (elements, className, action) => {
+      if (elements && elements.length) {
+        Array.from(elements).forEach((element) => {
+          element.classList[action](className);
+        });
+      }
+    };
 
-    for (let i = 0; i < paginationBullets?.length; i++) {
-      paginationBullets[i].classList.toggle("dark-mode-text");
-    }
+    const isDark = theme === "dark";
+    document.body.classList.toggle("dark-primary", isDark);
 
-    for (let i = 0; i < navLinks?.length; i++) {
-      navLinks[i].classList.toggle("dark-mode-text");
-    }
-
-    for (let i = 0; i < socialLinks?.length; i++) {
-      socialLinks[i].classList.toggle("dark-mode-text");
-    }
+    toggleClass(elements, "dark-secondary", isDark ? "add" : "remove");
+    toggleClass(paginationBullets, "dark-mode-text", isDark ? "add" : "remove");
+    toggleClass(navLinks, "dark-mode-text", isDark ? "add" : "remove");
+    toggleClass(socialLinks, "dark-mode-text", isDark ? "add" : "remove");
   }, [theme]);
 
   return (

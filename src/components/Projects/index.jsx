@@ -42,7 +42,7 @@ const Projects = ({ className }) => {
         grabCursor
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log("swiper", swiper)}
+        // onSwiper={(swiper) => console.log("swiper", swiper)}
         modules={[Pagination, A11y]}
       >
         {projects.map(({ blurb, githubLink, image, title }) => (
