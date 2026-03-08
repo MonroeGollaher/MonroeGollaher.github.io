@@ -1,10 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Masonry from "react-masonry-css";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Photo } from "@/data/photos";
+
+const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+
+function cloudinaryUrl(publicId: string, width?: number) {
+  const transforms = width ? `w_${width},f_auto,q_auto` : "f_auto,q_auto";
+  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${transforms}/${publicId}`;
+}
 
 const breakpointColumns = {
   default: 3,
@@ -24,17 +30,17 @@ export default function PhotoGrid({ photos }: { photos: Photo[] }) {
       >
         {photos.map((photo) => (
           <div
-            key={photo.src}
+            key={photo.publicId}
             className="mb-4 cursor-pointer group overflow-hidden rounded-lg"
             onClick={() => setSelected(photo)}
           >
-            <Image
-              src={photo.src}
+            <img
+              src={cloudinaryUrl(photo.publicId, 600)}
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
+              loading="lazy"
               className="w-full h-auto rounded-lg group-hover:scale-105 transition-transform duration-300"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
         ))}
@@ -57,11 +63,9 @@ export default function PhotoGrid({ photos }: { photos: Photo[] }) {
               className="relative max-w-5xl max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={selected.src}
+              <img
+                src={cloudinaryUrl(selected.publicId, 1400)}
                 alt={selected.alt}
-                width={selected.width}
-                height={selected.height}
                 className="max-h-[90vh] w-auto rounded-lg"
               />
               <button

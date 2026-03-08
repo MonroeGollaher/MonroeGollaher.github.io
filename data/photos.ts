@@ -1,5 +1,5 @@
 export interface Photo {
-  src: string;
+  publicId: string;
   alt: string;
   width: number;
   height: number;
@@ -7,165 +7,94 @@ export interface Photo {
 
 export const photos: Photo[] = [
   {
-    src: "/images/gallery/JDsunset.jpg",
+    publicId: "bkwedding1",
     alt: "JayDee Sunset",
     width: 1200,
     height: 800
   },
   {
-    src: "/images/gallery/Alleyway-min.jpg",
+    publicId: "chicago-buildings",
+    alt: "Chicago skyscrapers",
+    width: 1200,
+    height: 800
+  },
+  {
+    publicId: "Alleyway",
     alt: "Alleyway",
     width: 800,
     height: 1200
   },
   {
-    src: "/images/gallery/Snow '17.jpg",
+    publicId: "Snow17",
     alt: "Snow 2017",
     width: 1200,
     height: 800
   },
   {
-    src: "/images/gallery/Corn 3.JPG",
+    publicId: "CornField3",
     alt: "Corn Field",
     width: 800,
     height: 1200
   },
   {
-    src: "/images/gallery/HEAT STROKE.jpg",
-    alt: "Autumn Trees",
-    width: 1200,
-    height: 800
-  },
-  {
-    src: "/images/gallery/SnowBench2.png",
-    alt: "Snowy Bench",
+    publicId: "SnowyBench",
+    alt: "A Snowy Bench in Winter",
     width: 800,
     height: 1200
   },
   {
-    src: "/images/gallery/ChristyneChad4-min.jpg",
+    publicId: "ChristyneChad",
     alt: "Christyne & Chad",
     width: 1200,
     height: 800
   },
   {
-    src: "/images/gallery/cherries-min.JPG",
+    publicId: "CherryFestival",
     alt: "Emmett Cherry Picking Festival",
     width: 1200,
     height: 800
   },
+
   {
-    src: "/images/gallery/Corn 12.jpg",
-    alt: "Corn Field Portrait",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/bldgsgldnhr-min.jpg",
+    publicId: "downtown-boise",
     alt: "Downtown Boise at Golden Hour",
     width: 1200,
     height: 800
   },
   {
-    src: "/images/gallery/JDfall.png",
+    publicId: "JDfall",
     alt: "JayDee Fall",
     width: 800,
     height: 1200
   },
   {
-    src: "/images/gallery/jamecorn52.jpg",
-    alt: "Jame Corn Field",
-    width: 800,
-    height: 1200
+    publicId: "jamecornfield",
+    alt: "A person walking in a corn field",
+    width: 1200,
+    height: 800
   },
   {
-    src: "/images/gallery/MarcieandMatt.png",
+    publicId: "MarcieandMatt",
     alt: "Marcie & Matt",
     width: 1200,
     height: 800
   },
   {
-    src: "/images/gallery/buildings-min.jpg",
-    alt: "Chicago",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/EvanBrittany.png",
-    alt: "Evan & Brittany",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/cherryblossom-min.jpeg",
+    publicId: "cherryblossom",
     alt: "Cherry Blossoms",
     width: 1200,
     height: 800
   },
   {
-    src: "/images/gallery/Chicago-min.jpg",
-    alt: "Chicago Skyline",
+    publicId: "Chicago",
+    alt: "Chicago Streets",
     width: 1200,
     height: 800
   },
   {
-    src: "/images/gallery/Payette Lake 1.png",
-    alt: "Payette Lake",
-    width: 1200,
-    height: 800
-  },
-  {
-    src: "/images/gallery/Wayne_Calvin.png",
-    alt: "Wayne & Calvin",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/EvanBrittany2.png",
-    alt: "Evan & Brittany",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/Unzilla.jpg",
+    publicId: "Unzilla",
     alt: "Unzilla",
     width: 1200,
     height: 800
-  },
-  {
-    src: "/images/gallery/B&K/IMG_9041.png",
-    alt: "Bryan & Kaia",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/B&K/IMG_8761.png",
-    alt: "Bryan & Kaia",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/Keiko Downtown.jpg",
-    alt: "Keiko Downtown",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/Hot Air Balloon.png",
-    alt: "Hot Air Balloon",
-    width: 1200,
-    height: 800
-  },
-  {
-    src: "/images/gallery/flower.jpg",
-    alt: "Flower",
-    width: 800,
-    height: 1200
-  },
-  {
-    src: "/images/gallery/KhimiCorn.jpg",
-    alt: "Khimi Corn Field",
-    width: 800,
-    height: 1200
   }
 ];
